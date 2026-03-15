@@ -1,7 +1,7 @@
 # confluent-kafka-hands-on
 
 Welcome to the **confluent-kafka-hands-on** repository! 🚀  
-This project is a hands-on walkthrough of using **Confluent Kafka** with Python, covering topic creation, client setup, producer configuration, and sending messages into a Kafka topic.
+This project is a hands-on walkthrough of using **Confluent Kafka** with Python, covering topic creation, client setup, producer configuration, and sending messages into a Kafka topic. In addition, the consumer section demonstrates how to consume messages from Kafka topics in real-time.
 
 This repository is aimed at helping you understand:
 
@@ -11,6 +11,7 @@ This repository is aimed at helping you understand:
 - 🧑‍💻 Initializing a producer using `confluent-kafka`  
 - 📤 Sending a single message to a Kafka topic  
 - 🔄 Understanding the basic message flow from local data to Confluent Cloud  
+- 🖥️ Consuming messages from a Kafka topic in real-time using a Python consumer
 
 ---
 
@@ -167,6 +168,62 @@ This provides an additional view showing the confirmation that all the messages 
 - The **next step** in this project is to explore more advanced Kafka functionalities, such as consumer groups, message partitions, and stream processing.
 - This setup continues to be designed for **learning and hands-on practice** using Confluent Cloud.
 - Always ensure that your **API key**, **API secret**, and Kafka client configuration are **secure**. Never expose real credentials in public repositories.
+
+---
+
+## 🧑‍💻 Consumer: Receiving messages from the `ecommerce` topic
+
+### 🔹 Configuring Kafka config and creating a new consumer
+To consume messages from a Kafka topic, you first need to configure the Kafka consumer and create a new consumer. The configuration includes the **bootstrap servers**, **security settings**, and **topic subscription**.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/consumer/configuring%20kafka%20config%20and%20creating%20new%20consumer.png" width="900" alt="Configuring Kafka config and creating a new consumer">
+</p>
+
+---
+
+### 🔹 Subscribing to topic `ecommerce` and handling errors while decoding messages
+The consumer subscribes to the **`ecommerce`** topic and includes a function to handle errors while continuously listening for messages. The messages are also decoded from byte format back into UTF-8.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/consumer/subscribing%20to%20ecommerce%20topic%20and%20handling%20the%20errors%20when%20subscribing%20and%20decoding%20back%20the%20key%20and%20value.png" width="900" alt="Subscribing to the ecommerce topic and handling errors when subscribing and decoding back the key and value">
+</p>
+
+---
+
+### 🔹 Polling messages continuously and calling the `process_message` function
+The consumer is set up to continuously poll for new messages, using a `try-except` block to handle any errors and call the `process_message` function.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/consumer/Poll%20messages%20Continuously.png" width="900" alt="Polling messages continuously">
+</p>
+
+---
+
+### 🔹 Continuously polling for new messages
+The consumer is now running and actively listening for new messages. This demonstrates how to maintain a live connection with Kafka to receive real-time updates.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/consumer/continuously%20poll%20messages.png" width="900" alt="Continuously polling for new messages">
+</p>
+
+---
+
+### 🔹 Creating new messages
+The consumer is able to successfully create new messages and send them to the **`ecommerce`** topic.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/consumer/create%20new%20messages.png" width="900" alt="Creating new messages">
+</p>
+
+---
+
+### 🔹 Successfully received the new created message in real-time
+This confirms that the consumer successfully received the new message in real-time from the **`ecommerce`** topic.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/consumer/successfuly%20poll%20new%20message%20and%20real%20time.png" width="900" alt="Successfully received the new created message in real-time">
+</p>
 
 ---
 
