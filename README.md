@@ -125,4 +125,49 @@ This confirms that the Python producer was able to connect to Confluent Cloud an
 
 ---
 
-Feel free to explore the code and screenshots in this repository to better understand the full message flow using **Confluent Kafka** and Python. Happy learning and happy streaming! 🎉
+### 🔹 Sending multiple messages to the `ecommerce` topic
+This confirms that the Python producer was able to send multiple messages to Confluent Kafka. 
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/sending-multiple-messages/Sends%20multiple%20messages%20to%20confluent-kafka.png" width="900" alt="Successfully sending multiple messages to the ecommerce topic">
+</p>
+
+---
+
+### 🔹 Messages sent to Kafka successfully (via Google Colab output)
+This shows the Google Colab output indicating that the messages were successfully sent to the Confluent Kafka cluster.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/sending-multiple-messages/Message%20sent%20to%20kafka%20successfully.png" width="900" alt="Messages sent to Kafka successfully">
+</p>
+
+---
+
+### 🔹 Successfully received all messages in the `ecommerce` topic in Confluent
+This confirms that all the messages sent to the **`ecommerce`** topic were successfully received and processed by Confluent Kafka.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/sending-multiple-messages/successfully%20received%20the%20messages%20in%20confluent-kafka.png" width="900" alt="Successfully received all the messages in the ecommerce topic">
+</p>
+
+---
+
+### 🔹 Successfully received all the messages in the `ecommerce` topic in Confluent (Part 2)
+This provides an additional view showing the confirmation that all the messages were received in real-time from the **`ecommerce`** topic in Confluent Kafka.
+
+<p align="center">
+  <img src="https://github.com/LeynardPenaranda/confluent-kafka-hands-on/blob/main/images/sending-multiple-messages/successfully%20received%20all%20the%20messages.png" width="900" alt="Successfully received all the messages in the ecommerce topic part 2">
+</p>
+
+---
+
+## 💡 Additional notes
+
+- This walkthrough demonstrates how to **send multiple messages** to Confluent Kafka and successfully receive them in real-time.
+- The **next step** in this project is to explore more advanced Kafka functionalities, such as consumer groups, message partitions, and stream processing.
+- This setup continues to be designed for **learning and hands-on practice** using Confluent Cloud.
+- Always ensure that your **API key**, **API secret**, and Kafka client configuration are **secure**. Never expose real credentials in public repositories.
+
+---
+
+Feel free to explore the code and screenshots in this repository to better understand the complete message flow using **Confluent Kafka** and Python. Happy learning and happy streaming! 🎉
